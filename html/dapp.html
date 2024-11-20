@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DApp Demo</title>
+        <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+        <script src="./contract.js"></script>
+    </head>
+    <body>
+        <div style="text-align:center;margin-top:30px;">
+            <div style="text-align:center">
+                <button onclick="connectWallet()">连接钱包</button>
+                <button onclick="runContract()">调用合约</button>
+            </div>
+            <div style="margin-top:10px" id="account">账户：</div>
+            <div style="margin-top:10px" id="contract">合约：</div>
+        </div>
+        <script>
+            async function connectWallet() {
+                if (typeof window.ethereum === 'undefined') {
+                    alert('请先安装小狐狸钱包')
+                    return
+                }
+                let accounts = await window.ethereum.request({method: 'eth_requestAccounts'})
+                if (accounts.length > 0) {
+                    document.getElementById('account').innerText = '账户：' + accounts[0]
+                }
+            }
+
+            async function runContract() {
+                if (typeof window.ethereum === 'undefined') {
+                    alert('请先安装小狐狸钱包')
+                    return
+                }
+                let provider = new ethers.providers.Web3Provider(window.ethereum);
+                let contract = new ethers.Contract(contractAddress, contractAbi, provider.getSigner());
+                let result = await contract.SayHi();
+                document.getElementById("contract").innerText = result;
+            }
+        </script>
+    </body>
+</html>

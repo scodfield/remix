@@ -1,0 +1,61 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "SayHi",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "HelloWeb3 ",
+			"kind": "dev",
+			"methods": {},
+			"title": "ZeroGas",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/0_ZeroGas.sol": "ZeroGas"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/0_ZeroGas.sol": {
+			"keccak256": "0x2a2fce075dde2a8461b236cd0f56e6c48a629f3df9dffebc8913a739f6fae561",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ba68de058481a95d0567974541be4f241a88234f9e7f4ac5f249ff521e5c7cf",
+				"dweb:/ipfs/QmTv6afzmCqsh2ZrWiaCi4cpJEy34H6XosPhLRscUwDryF"
+			]
+		}
+	},
+	"version": 1
+}
